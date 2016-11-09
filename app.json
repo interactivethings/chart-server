@@ -1,0 +1,10 @@
+{
+  "buildpacks": [
+    {
+      "url": "https://github.com/mojodna/heroku-buildpack-cairo.git"
+    },
+    {
+      "url": "heroku/ruby"
+    }
+  ]
+}
