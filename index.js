@@ -1,11 +1,17 @@
 const express = require('express');
 const vg = require('vega');
-const vegaLite = require('vega-lite');
 
 const app = express();
 
-app.get('/', (request, response) => {
-  const spec = vegaLite.compile(JSON.parse(request.query.spec)).spec;
+const TYPES = {
+  undefined: require('./charts/Generic'),
+  DistrictBar: require('./charts/DistrictBar')
+};
+
+app.get('/:type?', (request, response) => {
+  const spec = TYPES[request.params.type]({
+    spec: JSON.parse(request.query.spec)
+  });
   vg.parse.spec(spec, (error, chart) => {
     if (error) {
       response.status(400).send(error.toString());
