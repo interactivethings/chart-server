@@ -16,8 +16,10 @@ app.get('/:type?', (request, response) => {
     if (error) {
       response.status(400).send(error.toString());
     } else {
-      const svg = chart({renderer: 'svg'}).update().svg();
+      const view = chart({renderer: 'svg'});
+      const svg = view.update().svg();
       response.type('svg').send(svg);
+      view.destroy();
     }
   });
 });
