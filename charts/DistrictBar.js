@@ -1,4 +1,4 @@
-const Generic = require('./Generic');
+const VegaLite = require('./VegaLite');
 
 const defaults = {
   data: undefined,
@@ -14,7 +14,7 @@ const defaults = {
 module.exports = ({spec}) => {
   const cfg = Object.assign({}, defaults, spec);
 
-  return Generic({
+  return VegaLite({
     spec: {
       config: {axis: {characterWidth: 0}},
       data: {
