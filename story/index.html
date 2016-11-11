@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<head>
+<title>Life in Zurich</title>
+<meta charset="utf-8">
+<link rel="stylesheet" media="all" href="//unpkg.com/github-markdown-css@2.4.1" />
+<style type="text/css">
+
+body { max-width: 600px; padding: 0 10px; margin: 20px auto; }
+figure { margin: 0 0 20px; }
+figure a { display: block; font-size: 10px; }
+figcaption { font-weight: bold; }
+.clearfix::after { display: table; clear: both; content: ""; }
+.left { float: left; width: 50%; padding-right: 10px; }
+.right { float: right; width: 50%; padding-left: 10px; }
+
+</style>
+</head>
+<body class="markdown-body">
+
+<h1>Life in Zurich</h1>
+
+<p>
+  A short data-driven story, to demonstrate <a>a charting system</a> and workflow.
+  <br /><em>By <a href="https://twitter.com/tpreusse">Thomas Preusse</a>, November 11th 2016</em>
+</p>
+
+<figure>
+  <img src="zurich.jpg" />
+  <a href="https://en.wikipedia.org/wiki/File:Zurich-lake.JPG">CC BY-SA 3.0 Mijio</a>
+</figure>
+
+<p>Zurich has <a href="https://data.stadt-zuerich.ch/dataset/freibad">18 outdoor bathing</a> spots and <a href="https://data.stadt-zuerich.ch/dataset/hallenbad">7 indoors</a>. Who celebrates this bathing high culture?</p>
+
+<div class="clearfix">
+  <figure data-chart="pop-1" class="left"></figure>
+  <figure data-chart="pop-2" class="right"></figure>
+</div>
+
+<p>
+  The municipality has 410'404 inhabitants.
+  It's organized in 12 districts.
+  Most, 72'831, live in district 11 in the quarters Affoltern, Oerlikon and Seebach.
+  District 11 has also grown faster than the rest of the city in the past 5 years.
+</p>
+
+<div class="clearfix">
+  <figure data-chart="income-1" class="left"></figure>
+  <figure data-chart="wealth-1" class="right"></figure>
+</div>
+
+<p>
+  The median taxable income is the highest in district 8, Seefeld, where I work and the 3rd lowest in district 4, Aussersihl, where I live. The statistic is measured based on residence.
+</p>
+
+<figure data-chart="pop-4"></figure>
+
+<p>
+  Inhabitans are between 0 and 107 years old. 89 women and 17 men are 100 or more years old.
+</p>
+
+<figure data-chart="pop-5"></figure>
+
+<p>
+  Enough about human inhabitants, what else is there?
+</p>
+
+<figure data-chart="dog-1"></figure>
+
+<p>
+  There are 6'928 dogs registered as of March 7th 2016 calling one of the twelve districts their home. Two mystery dogs do not live in a specific district:
+  <ul>
+    <li>a male tricolor Appenzeller Border Collie born in 2013</li>
+    <li>a female black Shih Tzu born in 1998</li>
+  </ul>
+  One can only assume that they have gone rough and escaped city police's control.
+</p>
+
+<figure data-chart="dog-3"></figure>
+
+<div class="clearfix">
+  <figure data-chart="dog-5" class="left"></figure>
+  <figure data-chart="dog-6" class="right"></figure>
+</div>
+
+
+<p>
+  If you want to see a labrador retriever head to district 7, for chihuahuas district 11 should deliver.
+</p>
+
+<figure data-chart="dog-7"></figure>
+
+<p>4'766 dogs are registered by women, 2'164 by men.</p>
+<p>The most populous primary breed with female owners is chihuahuas, with male owners labrador retrievers.</p>
+
+<div class="clearfix">
+  <figure class="left">
+    <img src="labrador-retriever.jpg" />
+    <a href="https://en.wikipedia.org/wiki/File:Labrador_Retriever_chocolate_Hershey_sit_(cropped).jpg">CC BY 2.0 Rob Hanson</a>
+  </figure>
+  <figure class="right">
+    <img src="chihuahua.jpg" />
+    <a href="https://en.wikipedia.org/wiki/File:Brouwn_chiwawa_dog.JPG">CC BY-SA 3.0 Peter van der Sluijs</a>
+  </figure>
+</div>
+
+<div class="clearfix">
+  <figure data-chart="dog-8" class="left"></figure>
+  <figure data-chart="dog-9" class="right"></figure>
+</div>
+
+<p>Back to the bathing, here are is a map of all the spots for you:</p>
+
+<figure data-chart="baths-1"></figure>
+
+<script src="//unpkg.com/gsheets@1.2.3/dist/gsheets.min.js"></script>
+<script src="//d3js.org/d3.v3.min.js"></script>
+
+<script>
+/* eslint-disable */
+gsheets.getWorksheet('1Mt6xzEGcuO9cusTUB3q3JwhNOZbhwHK71TfpOaUWS9c', 'charts', function(error, response) {
+  if (error) throw error;
+
+  var loader = 'data:image/svg+xml;utf8,' +
+    '<svg width="333" height="257" xmlns="http://www.w3.org/2000/svg">' +
+      '<text x="166" y="128" text-anchor="middle" font-family="sans-serif">Loading...</text>' +
+    '</svg>';
+
+  d3.selectAll('figure[data-chart]')
+    .datum(function() { return this.dataset; })
+    .each(function(d, i) {
+      var figure = d3.select(this);
+      var chart = response.data.find(function(chart) { return chart.id === d.chart; });
+      if (!chart) {
+        var error = 'Unkown chart ' + d.chart;
+        figure.append('figcaption').text(error);
+        console.error(error);
+        return;
+      }
+
+      figure.append('figcaption').text(chart.title);
+      var img = figure.append('img')
+        .attr('src', loader);
+      setTimeout(function() { img.attr('src', chart.src); }, 0);
+      figure.append('a').text('Source').attr('href', chart.source);
+    });
+});
+</script>
