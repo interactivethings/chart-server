@@ -12,8 +12,10 @@ figure { margin: 0 0 20px; }
 figure a { display: block; font-size: 10px; }
 figcaption { font-weight: bold; }
 .clearfix::after { display: table; clear: both; content: ""; }
-.left { float: left; width: 50%; padding-right: 10px; }
-.right { float: right; width: 50%; padding-left: 10px; }
+@media (min-width: 400px) {
+  .left { float: left; width: 50%; padding-right: 10px; }
+  .right { float: right; width: 50%; padding-left: 10px; }
+}
 
 </style>
 </head>
@@ -69,7 +71,7 @@ figcaption { font-weight: bold; }
 <figure data-chart="dog-1"></figure>
 
 <p>
-  There are 6'928 dogs registered as of March 7th 2016 calling one of the twelve districts their home. Two mystery dogs do not live in a specific district:
+  There are 6'928 dogs registered as of March 7th 2016, calling one of the twelve districts their home. Two mystery dogs do not live in a specific district:
   <ul>
     <li>a male tricolor Appenzeller Border Collie born in 2013</li>
     <li>a female black Shih Tzu born in 1998</li>
@@ -95,19 +97,20 @@ figcaption { font-weight: bold; }
 <p>The most populous primary breed with female owners is chihuahuas, with male owners labrador retrievers.</p>
 
 <div class="clearfix">
-  <figure class="left">
-    <img src="labrador-retriever.jpg" />
-    <a href="https://en.wikipedia.org/wiki/File:Labrador_Retriever_chocolate_Hershey_sit_(cropped).jpg">CC BY 2.0 Rob Hanson</a>
-  </figure>
-  <figure class="right">
-    <img src="chihuahua.jpg" />
-    <a href="https://en.wikipedia.org/wiki/File:Brouwn_chiwawa_dog.JPG">CC BY-SA 3.0 Peter van der Sluijs</a>
-  </figure>
-</div>
-
-<div class="clearfix">
-  <figure data-chart="dog-8" class="left"></figure>
-  <figure data-chart="dog-9" class="right"></figure>
+  <div class="left">
+    <figure>
+      <img src="labrador-retriever.jpg" />
+      <a href="https://en.wikipedia.org/wiki/File:Labrador_Retriever_chocolate_Hershey_sit_(cropped).jpg">CC BY 2.0 Rob Hanson</a>
+    </figure>
+    <figure data-chart="dog-8"></figure>
+  </div>
+  <div class="right">
+    <figure>
+      <img src="chihuahua.jpg" />
+      <a href="https://en.wikipedia.org/wiki/File:Brouwn_chiwawa_dog.JPG">CC BY-SA 3.0 Peter van der Sluijs</a>
+    </figure>
+    <figure data-chart="dog-9"></figure>
+  </div>
 </div>
 
 <p>Back to the bathing, here are is a map of all the spots for you:</p>

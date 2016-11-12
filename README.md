@@ -1,5 +1,7 @@
 # Chart Server
 
+[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
+
 A server for a [light-weight charting system](https://blog.interactivethings.com/).
 
 ## Prerequisites

@@ -27,7 +27,10 @@ module.exports = ({spec}) => {
       },
       mark: 'bar',
       encoding: {
-        x: {title: 'District', field: cfg.district, type: 'ordinal'},
+        x: {
+          title: 'District', field: cfg.district, type: 'ordinal',
+          axis: {axisWidth: 0, tickSize: 0, labelAngle: 0}
+        },
         y: {
           title: cfg.valueTitle, aggregate: cfg.aggregate,
           field: cfg.value, type: 'quantitative'
