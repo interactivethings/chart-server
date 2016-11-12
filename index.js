@@ -5,7 +5,9 @@ const app = express();
 
 const TYPES = {
   VegaLite: require('./charts/VegaLite'),
+  Bar: require('./charts/Bar'),
   DistrictBar: require('./charts/DistrictBar'),
+  DemographicBar: require('./charts/DemographicBar'),
   ZurichMap: require('./charts/ZurichMap')
 };
 
