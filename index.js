@@ -25,7 +25,9 @@ app.get('/:type', (request, response) => {
     }
     const view = chart({renderer: 'svg'});
     const svg = view.update().svg();
-    response.type('svg').send(svg);
+    response
+      .set('Cache-Control', `public, max-age=${60 * 60}`)
+      .type('svg').send(svg);
     view.destroy();
   });
 });
