@@ -1,6 +1,10 @@
 # Chart Server
 
-A server for a [light-weight charting system](https://blog.interactivethings.com/).
+A server for a light-weight charting system.
+
+[![Demo of how charts are rendered in a Google Spreadsheet](docs/playground.gif)](https://docs.google.com/spreadsheets/d/18ByaFrHDh7y0_nY-mFrk05Nx21e0UBAWe-qKfd2tAL8/edit#gid=0)
+
+Read «[Roll your own charting system](https://blog.interactivethings.com/)» on the Interactive Things blog to learn more.
 
 ## Prerequisites
 
