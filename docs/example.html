@@ -119,12 +119,11 @@ figcaption { font-weight: bold; }
 
 <p>Go forth and swim and chart!</p>
 
-<script src="//unpkg.com/gsheets@1.2.3/dist/gsheets.min.js"></script>
-<script src="//d3js.org/d3.v3.min.js"></script>
+<script src="//d3js.org/d3.v4.min.js"></script>
 
 <script>
 /* eslint-disable */
-gsheets.getWorksheet('1Mt6xzEGcuO9cusTUB3q3JwhNOZbhwHK71TfpOaUWS9c', 'charts', function(error, response) {
+d3.csv('example.csv', function(error, data) {
   if (error) throw error;
 
   var loader = 'data:image/svg+xml;utf8,' +
@@ -136,7 +135,7 @@ gsheets.getWorksheet('1Mt6xzEGcuO9cusTUB3q3JwhNOZbhwHK71TfpOaUWS9c', 'charts', f
     .datum(function() { return this.dataset; })
     .each(function(d, i) {
       var figure = d3.select(this);
-      var chart = response.data.find(function(chart) { return chart.id === d.chart; });
+      var chart = data.find(function(chart) { return chart.id === d.chart; });
       if (!chart) {
         var error = 'Unkown chart ' + d.chart;
         figure.append('figcaption').text(error);

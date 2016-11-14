@@ -1,0 +1,255 @@
+id,title,source,type,specification,output,src,undefined
+pop-1,Population 2015 by District,https://data.stadt-zuerich.ch/dataset/bev_bestand_jahr_quartier_alter_herkunft_geschlecht,DistrictBar,"{
+  ""data"": ""https://gist.githubusercontent.com/tpreusse/a0c00ad2a585994f3e8ecfa4a2f8cff8/raw/55185e48f723c0792b3d5a557559eae847e20cc7/bevbestandjahrquartieralterherkunftgeschlecht-optimized.csv"",
+  ""filter"": ""datum.StichtagDatJahr == 2015"",
+  ""district"": ""+slice(datum.QuarCd, 0, 2)"",
+  ""aggregate"": ""sum"",
+  ""value"": ""+datum.AnzBestWir"",
+  ""valueTitle"": ""Population""
+} ",,https://chart-server.now.sh/DistrictBar?spec=%7B%0A%20%20%22data%22%3A%20%22https%3A%2F%2Fgist.githubusercontent.com%2Ftpreusse%2Fa0c00ad2a585994f3e8ecfa4a2f8cff8%2Fraw%2F55185e48f723c0792b3d5a557559eae847e20cc7%2Fbevbestandjahrquartieralterherkunftgeschlecht-optimized.csv%22%2C%0A%20%20%22filter%22%3A%20%22datum.StichtagDatJahr%20%3D%3D%202015%22%2C%0A%20%20%22district%22%3A%20%22%2Bslice(datum.QuarCd%2C%200%2C%202)%22%2C%0A%20%20%22aggregate%22%3A%20%22sum%22%2C%0A%20%20%22value%22%3A%20%22%2Bdatum.AnzBestWir%22%2C%0A%20%20%22valueTitle%22%3A%20%22Population%22%0A%7D%20,http://localhost:3000/DistrictBar?spec=%7B%0A%20%20%22data%22%3A%20%22https%3A%2F%2Fgist.githubusercontent.com%2Ftpreusse%2Fa0c00ad2a585994f3e8ecfa4a2f8cff8%2Fraw%2F55185e48f723c0792b3d5a557559eae847e20cc7%2Fbevbestandjahrquartieralterherkunftgeschlecht-optimized.csv%22%2C%0A%20%20%22filter%22%3A%20%22datum.StichtagDatJahr%20%3D%3D%202015%22%2C%0A%20%20%22district%22%3A%20%22%2Bslice(datum.QuarCd%2C%200%2C%202)%22%2C%0A%20%20%22aggregate%22%3A%20%22sum%22%2C%0A%20%20%22value%22%3A%20%22%2Bdatum.AnzBestWir%22%2C%0A%20%20%22valueTitle%22%3A%20%22Population%22%0A%7D%20
+pop-1b,Population 2015 Total,https://data.stadt-zuerich.ch/dataset/bev_bestand_jahr_quartier_alter_herkunft_geschlecht,VegaLite,"{
+  ""data"": {
+    ""url"": ""https://gist.githubusercontent.com/tpreusse/a0c00ad2a585994f3e8ecfa4a2f8cff8/raw/55185e48f723c0792b3d5a557559eae847e20cc7/bevbestandjahrquartieralterherkunftgeschlecht-optimized.csv""
+  },
+  ""transform"": {
+    ""filter"": ""datum.StichtagDatJahr == 2015""
+  },
+  ""mark"": ""text"",
+  ""encoding"": {
+    ""text"": {""aggregate"": ""sum"", ""field"": ""AnzBestWir"", ""type"": ""quantitative""}
+  }
+} ",,https://chart-server.now.sh/VegaLite?spec=%7B%0A%20%20%22data%22%3A%20%7B%0A%20%20%20%20%22url%22%3A%20%22https%3A%2F%2Fgist.githubusercontent.com%2Ftpreusse%2Fa0c00ad2a585994f3e8ecfa4a2f8cff8%2Fraw%2F55185e48f723c0792b3d5a557559eae847e20cc7%2Fbevbestandjahrquartieralterherkunftgeschlecht-optimized.csv%22%0A%20%20%7D%2C%0A%20%20%22transform%22%3A%20%7B%0A%20%20%20%20%22filter%22%3A%20%22datum.StichtagDatJahr%20%3D%3D%202015%22%0A%20%20%7D%2C%0A%20%20%22mark%22%3A%20%22text%22%2C%0A%20%20%22encoding%22%3A%20%7B%0A%20%20%20%20%22text%22%3A%20%7B%22aggregate%22%3A%20%22sum%22%2C%20%22field%22%3A%20%22AnzBestWir%22%2C%20%22type%22%3A%20%22quantitative%22%7D%0A%20%20%7D%0A%7D%20,http://localhost:3000/VegaLite?spec=%7B%0A%20%20%22data%22%3A%20%7B%0A%20%20%20%20%22url%22%3A%20%22https%3A%2F%2Fgist.githubusercontent.com%2Ftpreusse%2Fa0c00ad2a585994f3e8ecfa4a2f8cff8%2Fraw%2F55185e48f723c0792b3d5a557559eae847e20cc7%2Fbevbestandjahrquartieralterherkunftgeschlecht-optimized.csv%22%0A%20%20%7D%2C%0A%20%20%22transform%22%3A%20%7B%0A%20%20%20%20%22filter%22%3A%20%22datum.StichtagDatJahr%20%3D%3D%202015%22%0A%20%20%7D%2C%0A%20%20%22mark%22%3A%20%22text%22%2C%0A%20%20%22encoding%22%3A%20%7B%0A%20%20%20%20%22text%22%3A%20%7B%22aggregate%22%3A%20%22sum%22%2C%20%22field%22%3A%20%22AnzBestWir%22%2C%20%22type%22%3A%20%22quantitative%22%7D%0A%20%20%7D%0A%7D%20
+pop-1c,Population 2015 District 11,https://data.stadt-zuerich.ch/dataset/bev_bestand_jahr_quartier_alter_herkunft_geschlecht,VegaLite,"{
+  ""data"": {
+    ""url"": ""https://gist.githubusercontent.com/tpreusse/a0c00ad2a585994f3e8ecfa4a2f8cff8/raw/55185e48f723c0792b3d5a557559eae847e20cc7/bevbestandjahrquartieralterherkunftgeschlecht-optimized.csv""
+  },
+  ""transform"": {
+    ""filter"": ""datum.StichtagDatJahr == 2015 && slice(datum.QuarCd, 0, 2) == '11'""
+  },
+  ""mark"": ""text"",
+  ""encoding"": {
+    ""text"": {""aggregate"": ""sum"", ""field"": ""AnzBestWir"", ""type"": ""quantitative""}
+  }
+} ",,https://chart-server.now.sh/VegaLite?spec=%7B%0A%20%20%22data%22%3A%20%7B%0A%20%20%20%20%22url%22%3A%20%22https%3A%2F%2Fgist.githubusercontent.com%2Ftpreusse%2Fa0c00ad2a585994f3e8ecfa4a2f8cff8%2Fraw%2F55185e48f723c0792b3d5a557559eae847e20cc7%2Fbevbestandjahrquartieralterherkunftgeschlecht-optimized.csv%22%0A%20%20%7D%2C%0A%20%20%22transform%22%3A%20%7B%0A%20%20%20%20%22filter%22%3A%20%22datum.StichtagDatJahr%20%3D%3D%202015%20%26%26%20slice(datum.QuarCd%2C%200%2C%202)%20%3D%3D%20'11'%22%0A%20%20%7D%2C%0A%20%20%22mark%22%3A%20%22text%22%2C%0A%20%20%22encoding%22%3A%20%7B%0A%20%20%20%20%22text%22%3A%20%7B%22aggregate%22%3A%20%22sum%22%2C%20%22field%22%3A%20%22AnzBestWir%22%2C%20%22type%22%3A%20%22quantitative%22%7D%0A%20%20%7D%0A%7D%20,http://localhost:3000/VegaLite?spec=%7B%0A%20%20%22data%22%3A%20%7B%0A%20%20%20%20%22url%22%3A%20%22https%3A%2F%2Fgist.githubusercontent.com%2Ftpreusse%2Fa0c00ad2a585994f3e8ecfa4a2f8cff8%2Fraw%2F55185e48f723c0792b3d5a557559eae847e20cc7%2Fbevbestandjahrquartieralterherkunftgeschlecht-optimized.csv%22%0A%20%20%7D%2C%0A%20%20%22transform%22%3A%20%7B%0A%20%20%20%20%22filter%22%3A%20%22datum.StichtagDatJahr%20%3D%3D%202015%20%26%26%20slice(datum.QuarCd%2C%200%2C%202)%20%3D%3D%20'11'%22%0A%20%20%7D%2C%0A%20%20%22mark%22%3A%20%22text%22%2C%0A%20%20%22encoding%22%3A%20%7B%0A%20%20%20%20%22text%22%3A%20%7B%22aggregate%22%3A%20%22sum%22%2C%20%22field%22%3A%20%22AnzBestWir%22%2C%20%22type%22%3A%20%22quantitative%22%7D%0A%20%20%7D%0A%7D%20
+income-1,Median Income 2012 by District,https://data.stadt-zuerich.ch/dataset/fd-median-einkommen-kreis,DistrictBar,"{
+  ""data"": ""https://gist.githubusercontent.com/tpreusse/718e1268529173a03cd4a01865f15ffa/raw/54e1deb2e13b4374c05661d8d05f557bd2e715dc/test.csv"",
+  ""filter"": ""datum.SteuerJahr == 2012 && datum.SteuerTarifLang == 'Grundtarif'"",
+  ""district"": ""+datum.KreisSort"",
+  ""value"": ""datum.SteuerEinkommen_p50 * 1000"",
+  ""valueTitle"": ""Median Taxable Income (Basic Rate)""
+} ",,https://chart-server.now.sh/DistrictBar?spec=%7B%0A%20%20%22data%22%3A%20%22https%3A%2F%2Fgist.githubusercontent.com%2Ftpreusse%2F718e1268529173a03cd4a01865f15ffa%2Fraw%2F54e1deb2e13b4374c05661d8d05f557bd2e715dc%2Ftest.csv%22%2C%0A%20%20%22filter%22%3A%20%22datum.SteuerJahr%20%3D%3D%202012%20%26%26%20datum.SteuerTarifLang%20%3D%3D%20'Grundtarif'%22%2C%0A%20%20%22district%22%3A%20%22%2Bdatum.KreisSort%22%2C%0A%20%20%22value%22%3A%20%22datum.SteuerEinkommen_p50%20*%201000%22%2C%0A%20%20%22valueTitle%22%3A%20%22Median%20Taxable%20Income%20(Basic%20Rate)%22%0A%7D%20,http://localhost:3000/DistrictBar?spec=%7B%0A%20%20%22data%22%3A%20%22https%3A%2F%2Fgist.githubusercontent.com%2Ftpreusse%2F718e1268529173a03cd4a01865f15ffa%2Fraw%2F54e1deb2e13b4374c05661d8d05f557bd2e715dc%2Ftest.csv%22%2C%0A%20%20%22filter%22%3A%20%22datum.SteuerJahr%20%3D%3D%202012%20%26%26%20datum.SteuerTarifLang%20%3D%3D%20'Grundtarif'%22%2C%0A%20%20%22district%22%3A%20%22%2Bdatum.KreisSort%22%2C%0A%20%20%22value%22%3A%20%22datum.SteuerEinkommen_p50%20*%201000%22%2C%0A%20%20%22valueTitle%22%3A%20%22Median%20Taxable%20Income%20(Basic%20Rate)%22%0A%7D%20
+wealth-1,Median Wealth 2012 by District,https://data.stadt-zuerich.ch/dataset/fd-median-vermoegen-kreis,DistrictBar,"{
+  ""data"": ""https://gist.githubusercontent.com/tpreusse/1a003b0d1830c0d056e91d460ef8f9f7/raw/8894478bcdd0dfcd5a54cb178d04b1da80e6ec61/wealth.csv"",
+  ""filter"": ""datum.SteuerJahr == 2012 && datum.SteuerTarifLang == 'Grundtarif'"",
+  ""district"": ""+datum.KreisSort"",
+  ""value"": ""datum.SteuerVermoegen_p50 * 1000"",
+  ""valueTitle"": ""Median Taxable Wealth (Basic Rate)""
+} ",,https://chart-server.now.sh/DistrictBar?spec=%7B%0A%20%20%22data%22%3A%20%22https%3A%2F%2Fgist.githubusercontent.com%2Ftpreusse%2F1a003b0d1830c0d056e91d460ef8f9f7%2Fraw%2F8894478bcdd0dfcd5a54cb178d04b1da80e6ec61%2Fwealth.csv%22%2C%0A%20%20%22filter%22%3A%20%22datum.SteuerJahr%20%3D%3D%202012%20%26%26%20datum.SteuerTarifLang%20%3D%3D%20'Grundtarif'%22%2C%0A%20%20%22district%22%3A%20%22%2Bdatum.KreisSort%22%2C%0A%20%20%22value%22%3A%20%22datum.SteuerVermoegen_p50%20*%201000%22%2C%0A%20%20%22valueTitle%22%3A%20%22Median%20Taxable%20Wealth%20(Basic%20Rate)%22%0A%7D%20,http://localhost:3000/DistrictBar?spec=%7B%0A%20%20%22data%22%3A%20%22https%3A%2F%2Fgist.githubusercontent.com%2Ftpreusse%2F1a003b0d1830c0d056e91d460ef8f9f7%2Fraw%2F8894478bcdd0dfcd5a54cb178d04b1da80e6ec61%2Fwealth.csv%22%2C%0A%20%20%22filter%22%3A%20%22datum.SteuerJahr%20%3D%3D%202012%20%26%26%20datum.SteuerTarifLang%20%3D%3D%20'Grundtarif'%22%2C%0A%20%20%22district%22%3A%20%22%2Bdatum.KreisSort%22%2C%0A%20%20%22value%22%3A%20%22datum.SteuerVermoegen_p50%20*%201000%22%2C%0A%20%20%22valueTitle%22%3A%20%22Median%20Taxable%20Wealth%20(Basic%20Rate)%22%0A%7D%20
+pop-2,Population 2010 to 2015,https://data.stadt-zuerich.ch/dataset/bev_bestand_jahr_quartier_alter_herkunft_geschlecht,VegaLite,"{
+  ""data"": {
+    ""url"": ""https://gist.githubusercontent.com/tpreusse/a0c00ad2a585994f3e8ecfa4a2f8cff8/raw/857911d7009abc871635400d47c783a3ad6abe36/bevbestandjahrquartieralterherkunftgeschlecht-optimized.csv""
+  },
+  ""transform"": {
+    ""calculate"": [{""field"": ""District"", ""expr"": ""+slice(datum.QuarCd, 0, 2)""}]
+  },
+  ""mark"": ""line"",
+  ""encoding"": {
+    ""x"": {
+      ""field"": ""StichtagDatJahr"", ""type"": ""temporal"", ""title"": ""Year"",
+      ""axis"": {""axisWidth"": 0, ""format"": ""%Y"", ""labelAngle"": 0}
+    },
+    ""y"": {
+      ""title"": ""Population"", ""aggregate"": ""sum"",
+      ""field"": ""AnzBestWir"", ""type"": ""quantitative""
+    },
+    ""color"": {""field"": ""District"", ""type"": ""nominal"", ""scale"": {""range"": ""category20""}}
+  }
+} ",,https://chart-server.now.sh/VegaLite?spec=%7B%0A%20%20%22data%22%3A%20%7B%0A%20%20%20%20%22url%22%3A%20%22https%3A%2F%2Fgist.githubusercontent.com%2Ftpreusse%2Fa0c00ad2a585994f3e8ecfa4a2f8cff8%2Fraw%2F857911d7009abc871635400d47c783a3ad6abe36%2Fbevbestandjahrquartieralterherkunftgeschlecht-optimized.csv%22%0A%20%20%7D%2C%0A%20%20%22transform%22%3A%20%7B%0A%20%20%20%20%22calculate%22%3A%20%5B%7B%22field%22%3A%20%22District%22%2C%20%22expr%22%3A%20%22%2Bslice(datum.QuarCd%2C%200%2C%202)%22%7D%5D%0A%20%20%7D%2C%0A%20%20%22mark%22%3A%20%22line%22%2C%0A%20%20%22encoding%22%3A%20%7B%0A%20%20%20%20%22x%22%3A%20%7B%0A%20%20%20%20%20%20%22field%22%3A%20%22StichtagDatJahr%22%2C%20%22type%22%3A%20%22temporal%22%2C%20%22title%22%3A%20%22Year%22%2C%0A%20%20%20%20%20%20%22axis%22%3A%20%7B%22axisWidth%22%3A%200%2C%20%22format%22%3A%20%22%25Y%22%2C%20%22labelAngle%22%3A%200%7D%0A%20%20%20%20%7D%2C%0A%20%20%20%20%22y%22%3A%20%7B%0A%20%20%20%20%20%20%22title%22%3A%20%22Population%22%2C%20%22aggregate%22%3A%20%22sum%22%2C%0A%20%20%20%20%20%20%22field%22%3A%20%22AnzBestWir%22%2C%20%22type%22%3A%20%22quantitative%22%0A%20%20%20%20%7D%2C%0A%20%20%20%20%22color%22%3A%20%7B%22field%22%3A%20%22District%22%2C%20%22type%22%3A%20%22nominal%22%2C%20%22scale%22%3A%20%7B%22range%22%3A%20%22category20%22%7D%7D%0A%20%20%7D%0A%7D%20,http://localhost:3000/VegaLite?spec=%7B%0A%20%20%22data%22%3A%20%7B%0A%20%20%20%20%22url%22%3A%20%22https%3A%2F%2Fgist.githubusercontent.com%2Ftpreusse%2Fa0c00ad2a585994f3e8ecfa4a2f8cff8%2Fraw%2F857911d7009abc871635400d47c783a3ad6abe36%2Fbevbestandjahrquartieralterherkunftgeschlecht-optimized.csv%22%0A%20%20%7D%2C%0A%20%20%22transform%22%3A%20%7B%0A%20%20%20%20%22calculate%22%3A%20%5B%7B%22field%22%3A%20%22District%22%2C%20%22expr%22%3A%20%22%2Bslice(datum.QuarCd%2C%200%2C%202)%22%7D%5D%0A%20%20%7D%2C%0A%20%20%22mark%22%3A%20%22line%22%2C%0A%20%20%22encoding%22%3A%20%7B%0A%20%20%20%20%22x%22%3A%20%7B%0A%20%20%20%20%20%20%22field%22%3A%20%22StichtagDatJahr%22%2C%20%22type%22%3A%20%22temporal%22%2C%20%22title%22%3A%20%22Year%22%2C%0A%20%20%20%20%20%20%22axis%22%3A%20%7B%22axisWidth%22%3A%200%2C%20%22format%22%3A%20%22%25Y%22%2C%20%22labelAngle%22%3A%200%7D%0A%20%20%20%20%7D%2C%0A%20%20%20%20%22y%22%3A%20%7B%0A%20%20%20%20%20%20%22title%22%3A%20%22Population%22%2C%20%22aggregate%22%3A%20%22sum%22%2C%0A%20%20%20%20%20%20%22field%22%3A%20%22AnzBestWir%22%2C%20%22type%22%3A%20%22quantitative%22%0A%20%20%20%20%7D%2C%0A%20%20%20%20%22color%22%3A%20%7B%22field%22%3A%20%22District%22%2C%20%22type%22%3A%20%22nominal%22%2C%20%22scale%22%3A%20%7B%22range%22%3A%20%22category20%22%7D%7D%0A%20%20%7D%0A%7D%20
+pop-3,Population 2015 by Age,https://data.stadt-zuerich.ch/dataset/bev_bestand_jahr_quartier_alter_herkunft_geschlecht,VegaLite,"{
+  ""data"": {
+    ""url"": ""https://gist.githubusercontent.com/tpreusse/a0c00ad2a585994f3e8ecfa4a2f8cff8/raw/c2820d5391be2faefb478f28bfc76578ceadf63e/bevbestandjahrquartieralterherkunftgeschlecht-optimized.csv"",
+    ""format"": { ""parse"": {""AlterVKurz"":""number""}}
+  },
+  ""transform"": {
+    ""filter"": ""datum.StichtagDatJahr == 2015""
+  },
+  ""mark"": ""bar"",
+  ""encoding"": {
+    ""x"": {""title"": ""Age"", ""field"": ""AlterVKurz"", ""type"": ""ordinal""},
+    ""y"": {
+      ""title"": ""Population"", ""aggregate"": ""sum"",
+      ""field"": ""AnzBestWir"", ""type"": ""quantitative""
+    }
+  }
+}",,https://chart-server.now.sh/VegaLite?spec=%7B%0A%20%20%22data%22%3A%20%7B%0A%20%20%20%20%22url%22%3A%20%22https%3A%2F%2Fgist.githubusercontent.com%2Ftpreusse%2Fa0c00ad2a585994f3e8ecfa4a2f8cff8%2Fraw%2Fc2820d5391be2faefb478f28bfc76578ceadf63e%2Fbevbestandjahrquartieralterherkunftgeschlecht-optimized.csv%22%2C%0A%20%20%20%20%22format%22%3A%20%7B%20%22parse%22%3A%20%7B%22AlterVKurz%22%3A%22number%22%7D%7D%0A%20%20%7D%2C%0A%20%20%22transform%22%3A%20%7B%0A%20%20%20%20%22filter%22%3A%20%22datum.StichtagDatJahr%20%3D%3D%202015%22%0A%20%20%7D%2C%0A%20%20%22mark%22%3A%20%22bar%22%2C%0A%20%20%22encoding%22%3A%20%7B%0A%20%20%20%20%22x%22%3A%20%7B%22title%22%3A%20%22Age%22%2C%20%22field%22%3A%20%22AlterVKurz%22%2C%20%22type%22%3A%20%22ordinal%22%7D%2C%0A%20%20%20%20%22y%22%3A%20%7B%0A%20%20%20%20%20%20%22title%22%3A%20%22Population%22%2C%20%22aggregate%22%3A%20%22sum%22%2C%0A%20%20%20%20%20%20%22field%22%3A%20%22AnzBestWir%22%2C%20%22type%22%3A%20%22quantitative%22%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D,http://localhost:3000/VegaLite?spec=%7B%0A%20%20%22data%22%3A%20%7B%0A%20%20%20%20%22url%22%3A%20%22https%3A%2F%2Fgist.githubusercontent.com%2Ftpreusse%2Fa0c00ad2a585994f3e8ecfa4a2f8cff8%2Fraw%2Fc2820d5391be2faefb478f28bfc76578ceadf63e%2Fbevbestandjahrquartieralterherkunftgeschlecht-optimized.csv%22%2C%0A%20%20%20%20%22format%22%3A%20%7B%20%22parse%22%3A%20%7B%22AlterVKurz%22%3A%22number%22%7D%7D%0A%20%20%7D%2C%0A%20%20%22transform%22%3A%20%7B%0A%20%20%20%20%22filter%22%3A%20%22datum.StichtagDatJahr%20%3D%3D%202015%22%0A%20%20%7D%2C%0A%20%20%22mark%22%3A%20%22bar%22%2C%0A%20%20%22encoding%22%3A%20%7B%0A%20%20%20%20%22x%22%3A%20%7B%22title%22%3A%20%22Age%22%2C%20%22field%22%3A%20%22AlterVKurz%22%2C%20%22type%22%3A%20%22ordinal%22%7D%2C%0A%20%20%20%20%22y%22%3A%20%7B%0A%20%20%20%20%20%20%22title%22%3A%20%22Population%22%2C%20%22aggregate%22%3A%20%22sum%22%2C%0A%20%20%20%20%20%20%22field%22%3A%20%22AnzBestWir%22%2C%20%22type%22%3A%20%22quantitative%22%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D
+pop-4,Population 2015 by Age and Gender,https://data.stadt-zuerich.ch/dataset/bev_bestand_jahr_quartier_alter_herkunft_geschlecht,DemographicBar,"{
+  ""data"": ""https://gist.githubusercontent.com/tpreusse/a0c00ad2a585994f3e8ecfa4a2f8cff8/raw/c2820d5391be2faefb478f28bfc76578ceadf63e/bevbestandjahrquartieralterherkunftgeschlecht-optimized.csv"",
+  ""filter"": ""datum.StichtagDatJahr == 2015"",
+  ""age"": ""+datum.AlterVKurz"",
+  ""sex"": ""datum.SexKurz == 'M' ? 'M' : 'F'"",
+  ""value"": ""+datum.AnzBestWir"",
+  ""bandSize"": 12
+}",,https://chart-server.now.sh/DemographicBar?spec=%7B%0A%20%20%22data%22%3A%20%22https%3A%2F%2Fgist.githubusercontent.com%2Ftpreusse%2Fa0c00ad2a585994f3e8ecfa4a2f8cff8%2Fraw%2Fc2820d5391be2faefb478f28bfc76578ceadf63e%2Fbevbestandjahrquartieralterherkunftgeschlecht-optimized.csv%22%2C%0A%20%20%22filter%22%3A%20%22datum.StichtagDatJahr%20%3D%3D%202015%22%2C%0A%20%20%22age%22%3A%20%22%2Bdatum.AlterVKurz%22%2C%0A%20%20%22sex%22%3A%20%22datum.SexKurz%20%3D%3D%20'M'%20%3F%20'M'%20%3A%20'F'%22%2C%0A%20%20%22value%22%3A%20%22%2Bdatum.AnzBestWir%22%2C%0A%20%20%22bandSize%22%3A%2012%0A%7D,http://localhost:3000/DemographicBar?spec=%7B%0A%20%20%22data%22%3A%20%22https%3A%2F%2Fgist.githubusercontent.com%2Ftpreusse%2Fa0c00ad2a585994f3e8ecfa4a2f8cff8%2Fraw%2Fc2820d5391be2faefb478f28bfc76578ceadf63e%2Fbevbestandjahrquartieralterherkunftgeschlecht-optimized.csv%22%2C%0A%20%20%22filter%22%3A%20%22datum.StichtagDatJahr%20%3D%3D%202015%22%2C%0A%20%20%22age%22%3A%20%22%2Bdatum.AlterVKurz%22%2C%0A%20%20%22sex%22%3A%20%22datum.SexKurz%20%3D%3D%20'M'%20%3F%20'M'%20%3A%20'F'%22%2C%0A%20%20%22value%22%3A%20%22%2Bdatum.AnzBestWir%22%2C%0A%20%20%22bandSize%22%3A%2012%0A%7D
+pop-5,Population over 100 Years Old by Age and Gender,https://data.stadt-zuerich.ch/dataset/bev_bestand_jahr_quartier_alter_herkunft_geschlecht,DemographicBar,"{
+  ""data"": ""https://gist.githubusercontent.com/tpreusse/a0c00ad2a585994f3e8ecfa4a2f8cff8/raw/c2820d5391be2faefb478f28bfc76578ceadf63e/bevbestandjahrquartieralterherkunftgeschlecht-optimized.csv"",
+  ""filter"": ""datum.StichtagDatJahr == 2015 && datum.AlterVKurz >= 100"",
+  ""age"": ""+datum.AlterVKurz"",
+  ""sex"": ""datum.SexKurz == 'M' ? 'M' : 'F'"",
+  ""value"": ""+datum.AnzBestWir"",
+  ""orient"": ""horizontal""
+}",,https://chart-server.now.sh/DemographicBar?spec=%7B%0A%20%20%22data%22%3A%20%22https%3A%2F%2Fgist.githubusercontent.com%2Ftpreusse%2Fa0c00ad2a585994f3e8ecfa4a2f8cff8%2Fraw%2Fc2820d5391be2faefb478f28bfc76578ceadf63e%2Fbevbestandjahrquartieralterherkunftgeschlecht-optimized.csv%22%2C%0A%20%20%22filter%22%3A%20%22datum.StichtagDatJahr%20%3D%3D%202015%20%26%26%20datum.AlterVKurz%20%3E%3D%20100%22%2C%0A%20%20%22age%22%3A%20%22%2Bdatum.AlterVKurz%22%2C%0A%20%20%22sex%22%3A%20%22datum.SexKurz%20%3D%3D%20'M'%20%3F%20'M'%20%3A%20'F'%22%2C%0A%20%20%22value%22%3A%20%22%2Bdatum.AnzBestWir%22%2C%0A%20%20%22orient%22%3A%20%22horizontal%22%0A%7D,http://localhost:3000/DemographicBar?spec=%7B%0A%20%20%22data%22%3A%20%22https%3A%2F%2Fgist.githubusercontent.com%2Ftpreusse%2Fa0c00ad2a585994f3e8ecfa4a2f8cff8%2Fraw%2Fc2820d5391be2faefb478f28bfc76578ceadf63e%2Fbevbestandjahrquartieralterherkunftgeschlecht-optimized.csv%22%2C%0A%20%20%22filter%22%3A%20%22datum.StichtagDatJahr%20%3D%3D%202015%20%26%26%20datum.AlterVKurz%20%3E%3D%20100%22%2C%0A%20%20%22age%22%3A%20%22%2Bdatum.AlterVKurz%22%2C%0A%20%20%22sex%22%3A%20%22datum.SexKurz%20%3D%3D%20'M'%20%3F%20'M'%20%3A%20'F'%22%2C%0A%20%20%22value%22%3A%20%22%2Bdatum.AnzBestWir%22%2C%0A%20%20%22orient%22%3A%20%22horizontal%22%0A%7D
+pop-5b,Population over 100 Years,https://data.stadt-zuerich.ch/dataset/bev_bestand_jahr_quartier_alter_herkunft_geschlecht,VegaLite,"{
+  ""data"": {
+    ""url"": ""https://gist.githubusercontent.com/tpreusse/a0c00ad2a585994f3e8ecfa4a2f8cff8/raw/55185e48f723c0792b3d5a557559eae847e20cc7/bevbestandjahrquartieralterherkunftgeschlecht-optimized.csv""
+  },
+  ""transform"": {
+    ""filter"": ""datum.StichtagDatJahr == 2015 && datum.AlterVKurz >= 100""
+  },
+  ""mark"": ""text"",
+  ""encoding"": {
+    ""column"": {""title"": ""Gender"", ""field"": ""SexKurz"", ""type"": ""nominal"", ""sort"": ""descending""},
+    ""color"": {""field"": ""SexKurz"", ""type"": ""nominal"",""scale"": {""range"": [""#659CCA"",""#EA98D2""]}},
+    ""text"": {""aggregate"": ""sum"", ""field"": ""AnzBestWir"", ""type"": ""quantitative""}
+  }
+}",,https://chart-server.now.sh/VegaLite?spec=%7B%0A%20%20%22data%22%3A%20%7B%0A%20%20%20%20%22url%22%3A%20%22https%3A%2F%2Fgist.githubusercontent.com%2Ftpreusse%2Fa0c00ad2a585994f3e8ecfa4a2f8cff8%2Fraw%2F55185e48f723c0792b3d5a557559eae847e20cc7%2Fbevbestandjahrquartieralterherkunftgeschlecht-optimized.csv%22%0A%20%20%7D%2C%0A%20%20%22transform%22%3A%20%7B%0A%20%20%20%20%22filter%22%3A%20%22datum.StichtagDatJahr%20%3D%3D%202015%20%26%26%20datum.AlterVKurz%20%3E%3D%20100%22%0A%20%20%7D%2C%0A%20%20%22mark%22%3A%20%22text%22%2C%0A%20%20%22encoding%22%3A%20%7B%0A%20%20%20%20%22column%22%3A%20%7B%22title%22%3A%20%22Gender%22%2C%20%22field%22%3A%20%22SexKurz%22%2C%20%22type%22%3A%20%22nominal%22%2C%20%22sort%22%3A%20%22descending%22%7D%2C%0A%20%20%20%20%22color%22%3A%20%7B%22field%22%3A%20%22SexKurz%22%2C%20%22type%22%3A%20%22nominal%22%2C%22scale%22%3A%20%7B%22range%22%3A%20%5B%22%23659CCA%22%2C%22%23EA98D2%22%5D%7D%7D%2C%0A%20%20%20%20%22text%22%3A%20%7B%22aggregate%22%3A%20%22sum%22%2C%20%22field%22%3A%20%22AnzBestWir%22%2C%20%22type%22%3A%20%22quantitative%22%7D%0A%20%20%7D%0A%7D,http://localhost:3000/VegaLite?spec=%7B%0A%20%20%22data%22%3A%20%7B%0A%20%20%20%20%22url%22%3A%20%22https%3A%2F%2Fgist.githubusercontent.com%2Ftpreusse%2Fa0c00ad2a585994f3e8ecfa4a2f8cff8%2Fraw%2F55185e48f723c0792b3d5a557559eae847e20cc7%2Fbevbestandjahrquartieralterherkunftgeschlecht-optimized.csv%22%0A%20%20%7D%2C%0A%20%20%22transform%22%3A%20%7B%0A%20%20%20%20%22filter%22%3A%20%22datum.StichtagDatJahr%20%3D%3D%202015%20%26%26%20datum.AlterVKurz%20%3E%3D%20100%22%0A%20%20%7D%2C%0A%20%20%22mark%22%3A%20%22text%22%2C%0A%20%20%22encoding%22%3A%20%7B%0A%20%20%20%20%22column%22%3A%20%7B%22title%22%3A%20%22Gender%22%2C%20%22field%22%3A%20%22SexKurz%22%2C%20%22type%22%3A%20%22nominal%22%2C%20%22sort%22%3A%20%22descending%22%7D%2C%0A%20%20%20%20%22color%22%3A%20%7B%22field%22%3A%20%22SexKurz%22%2C%20%22type%22%3A%20%22nominal%22%2C%22scale%22%3A%20%7B%22range%22%3A%20%5B%22%23659CCA%22%2C%22%23EA98D2%22%5D%7D%7D%2C%0A%20%20%20%20%22text%22%3A%20%7B%22aggregate%22%3A%20%22sum%22%2C%20%22field%22%3A%20%22AnzBestWir%22%2C%20%22type%22%3A%20%22quantitative%22%7D%0A%20%20%7D%0A%7D
+dog-1,Dogs by District (07.03.2016),https://data.stadt-zuerich.ch/dataset/pd-stapo-hundebestand,DistrictBar,"{
+  ""data"": ""https://data.stadt-zuerich.ch/dataset/pd_stapo_hundebestand/resource/9e163ae4-ca75-45ca-95f6-5a209fbd226a/download/20160307hundehalter.csv"",
+  ""filter"": ""datum.STADTKREIS"",
+  ""district"": ""+datum.STADTKREIS"",
+  ""aggregate"": ""count"",
+  ""valueTitle"": ""Dogs""
+} ",,https://chart-server.now.sh/DistrictBar?spec=%7B%0A%20%20%22data%22%3A%20%22https%3A%2F%2Fdata.stadt-zuerich.ch%2Fdataset%2Fpd_stapo_hundebestand%2Fresource%2F9e163ae4-ca75-45ca-95f6-5a209fbd226a%2Fdownload%2F20160307hundehalter.csv%22%2C%0A%20%20%22filter%22%3A%20%22datum.STADTKREIS%22%2C%0A%20%20%22district%22%3A%20%22%2Bdatum.STADTKREIS%22%2C%0A%20%20%22aggregate%22%3A%20%22count%22%2C%0A%20%20%22valueTitle%22%3A%20%22Dogs%22%0A%7D%20,http://localhost:3000/DistrictBar?spec=%7B%0A%20%20%22data%22%3A%20%22https%3A%2F%2Fdata.stadt-zuerich.ch%2Fdataset%2Fpd_stapo_hundebestand%2Fresource%2F9e163ae4-ca75-45ca-95f6-5a209fbd226a%2Fdownload%2F20160307hundehalter.csv%22%2C%0A%20%20%22filter%22%3A%20%22datum.STADTKREIS%22%2C%0A%20%20%22district%22%3A%20%22%2Bdatum.STADTKREIS%22%2C%0A%20%20%22aggregate%22%3A%20%22count%22%2C%0A%20%20%22valueTitle%22%3A%20%22Dogs%22%0A%7D%20
+dog-1b,Dogs with District Count (07.03.2016),https://data.stadt-zuerich.ch/dataset/pd-stapo-hundebestand,VegaLite,"{
+  ""data"": {
+    ""url"": ""https://data.stadt-zuerich.ch/dataset/pd_stapo_hundebestand/resource/9e163ae4-ca75-45ca-95f6-5a209fbd226a/download/20160307hundehalter.csv""
+  },
+  ""transform"": {
+    ""filter"": ""datum.STADTKREIS""
+  },
+  ""mark"": ""text"",
+  ""encoding"": {
+    ""text"": {""aggregate"": ""count"", ""field"": ""*"", ""type"": ""quantitative""}
+  }
+}",,https://chart-server.now.sh/VegaLite?spec=%7B%0A%20%20%22data%22%3A%20%7B%0A%20%20%20%20%22url%22%3A%20%22https%3A%2F%2Fdata.stadt-zuerich.ch%2Fdataset%2Fpd_stapo_hundebestand%2Fresource%2F9e163ae4-ca75-45ca-95f6-5a209fbd226a%2Fdownload%2F20160307hundehalter.csv%22%0A%20%20%7D%2C%0A%20%20%22transform%22%3A%20%7B%0A%20%20%20%20%22filter%22%3A%20%22datum.STADTKREIS%22%0A%20%20%7D%2C%0A%20%20%22mark%22%3A%20%22text%22%2C%0A%20%20%22encoding%22%3A%20%7B%0A%20%20%20%20%22text%22%3A%20%7B%22aggregate%22%3A%20%22count%22%2C%20%22field%22%3A%20%22*%22%2C%20%22type%22%3A%20%22quantitative%22%7D%0A%20%20%7D%0A%7D,http://localhost:3000/VegaLite?spec=%7B%0A%20%20%22data%22%3A%20%7B%0A%20%20%20%20%22url%22%3A%20%22https%3A%2F%2Fdata.stadt-zuerich.ch%2Fdataset%2Fpd_stapo_hundebestand%2Fresource%2F9e163ae4-ca75-45ca-95f6-5a209fbd226a%2Fdownload%2F20160307hundehalter.csv%22%0A%20%20%7D%2C%0A%20%20%22transform%22%3A%20%7B%0A%20%20%20%20%22filter%22%3A%20%22datum.STADTKREIS%22%0A%20%20%7D%2C%0A%20%20%22mark%22%3A%20%22text%22%2C%0A%20%20%22encoding%22%3A%20%7B%0A%20%20%20%20%22text%22%3A%20%7B%22aggregate%22%3A%20%22count%22%2C%20%22field%22%3A%20%22*%22%2C%20%22type%22%3A%20%22quantitative%22%7D%0A%20%20%7D%0A%7D
+dog-1c,Dogs without District Count (07.03.2016),https://data.stadt-zuerich.ch/dataset/pd-stapo-hundebestand,VegaLite,"{
+  ""data"": {
+    ""url"": ""https://data.stadt-zuerich.ch/dataset/pd_stapo_hundebestand/resource/9e163ae4-ca75-45ca-95f6-5a209fbd226a/download/20160307hundehalter.csv""
+  },
+  ""transform"": {
+    ""filter"": ""!datum.STADTKREIS""
+  },
+  ""mark"": ""text"",
+  ""encoding"": {
+    ""text"": {""aggregate"": ""count"", ""field"": ""*"", ""type"": ""quantitative""}
+  }
+}",,https://chart-server.now.sh/VegaLite?spec=%7B%0A%20%20%22data%22%3A%20%7B%0A%20%20%20%20%22url%22%3A%20%22https%3A%2F%2Fdata.stadt-zuerich.ch%2Fdataset%2Fpd_stapo_hundebestand%2Fresource%2F9e163ae4-ca75-45ca-95f6-5a209fbd226a%2Fdownload%2F20160307hundehalter.csv%22%0A%20%20%7D%2C%0A%20%20%22transform%22%3A%20%7B%0A%20%20%20%20%22filter%22%3A%20%22!datum.STADTKREIS%22%0A%20%20%7D%2C%0A%20%20%22mark%22%3A%20%22text%22%2C%0A%20%20%22encoding%22%3A%20%7B%0A%20%20%20%20%22text%22%3A%20%7B%22aggregate%22%3A%20%22count%22%2C%20%22field%22%3A%20%22*%22%2C%20%22type%22%3A%20%22quantitative%22%7D%0A%20%20%7D%0A%7D,http://localhost:3000/VegaLite?spec=%7B%0A%20%20%22data%22%3A%20%7B%0A%20%20%20%20%22url%22%3A%20%22https%3A%2F%2Fdata.stadt-zuerich.ch%2Fdataset%2Fpd_stapo_hundebestand%2Fresource%2F9e163ae4-ca75-45ca-95f6-5a209fbd226a%2Fdownload%2F20160307hundehalter.csv%22%0A%20%20%7D%2C%0A%20%20%22transform%22%3A%20%7B%0A%20%20%20%20%22filter%22%3A%20%22!datum.STADTKREIS%22%0A%20%20%7D%2C%0A%20%20%22mark%22%3A%20%22text%22%2C%0A%20%20%22encoding%22%3A%20%7B%0A%20%20%20%20%22text%22%3A%20%7B%22aggregate%22%3A%20%22count%22%2C%20%22field%22%3A%20%22*%22%2C%20%22type%22%3A%20%22quantitative%22%7D%0A%20%20%7D%0A%7D
+dog-2,Dogs by Primary Breed (07.03.2016),https://data.stadt-zuerich.ch/dataset/pd-stapo-hundebestand,Bar,"{
+  ""data"": ""https://data.stadt-zuerich.ch/dataset/pd_stapo_hundebestand/resource/9e163ae4-ca75-45ca-95f6-5a209fbd226a/download/20160307hundehalter.csv"",
+  ""y"": ""datum.RASSE1"",
+  ""aggregate"": ""count"",
+  ""valueTitle"": ""Dogs""
+} ",,https://chart-server.now.sh/Bar?spec=%7B%0A%20%20%22data%22%3A%20%22https%3A%2F%2Fdata.stadt-zuerich.ch%2Fdataset%2Fpd_stapo_hundebestand%2Fresource%2F9e163ae4-ca75-45ca-95f6-5a209fbd226a%2Fdownload%2F20160307hundehalter.csv%22%2C%0A%20%20%22y%22%3A%20%22datum.RASSE1%22%2C%0A%20%20%22aggregate%22%3A%20%22count%22%2C%0A%20%20%22valueTitle%22%3A%20%22Dogs%22%0A%7D%20,http://localhost:3000/Bar?spec=%7B%0A%20%20%22data%22%3A%20%22https%3A%2F%2Fdata.stadt-zuerich.ch%2Fdataset%2Fpd_stapo_hundebestand%2Fresource%2F9e163ae4-ca75-45ca-95f6-5a209fbd226a%2Fdownload%2F20160307hundehalter.csv%22%2C%0A%20%20%22y%22%3A%20%22datum.RASSE1%22%2C%0A%20%20%22aggregate%22%3A%20%22count%22%2C%0A%20%20%22valueTitle%22%3A%20%22Dogs%22%0A%7D%20
+dog-2b7,Dogs by Primary Breed in District 7 (07.03.2016),https://data.stadt-zuerich.ch/dataset/pd-stapo-hundebestand,Bar,"{
+  ""data"": ""https://data.stadt-zuerich.ch/dataset/pd_stapo_hundebestand/resource/9e163ae4-ca75-45ca-95f6-5a209fbd226a/download/20160307hundehalter.csv"",
+  ""filter"": ""datum.STADTKREIS == 7"",
+  ""y"": ""datum.RASSE1"",
+  ""aggregate"": ""count"",
+  ""valueTitle"": ""Dogs""
+}",,https://chart-server.now.sh/Bar?spec=%7B%0A%20%20%22data%22%3A%20%22https%3A%2F%2Fdata.stadt-zuerich.ch%2Fdataset%2Fpd_stapo_hundebestand%2Fresource%2F9e163ae4-ca75-45ca-95f6-5a209fbd226a%2Fdownload%2F20160307hundehalter.csv%22%2C%0A%20%20%22filter%22%3A%20%22datum.STADTKREIS%20%3D%3D%207%22%2C%0A%20%20%22y%22%3A%20%22datum.RASSE1%22%2C%0A%20%20%22aggregate%22%3A%20%22count%22%2C%0A%20%20%22valueTitle%22%3A%20%22Dogs%22%0A%7D,http://localhost:3000/Bar?spec=%7B%0A%20%20%22data%22%3A%20%22https%3A%2F%2Fdata.stadt-zuerich.ch%2Fdataset%2Fpd_stapo_hundebestand%2Fresource%2F9e163ae4-ca75-45ca-95f6-5a209fbd226a%2Fdownload%2F20160307hundehalter.csv%22%2C%0A%20%20%22filter%22%3A%20%22datum.STADTKREIS%20%3D%3D%207%22%2C%0A%20%20%22y%22%3A%20%22datum.RASSE1%22%2C%0A%20%20%22aggregate%22%3A%20%22count%22%2C%0A%20%20%22valueTitle%22%3A%20%22Dogs%22%0A%7D
+dog-2b11,Dogs by Primary Breed in District 11 (07.03.2016),https://data.stadt-zuerich.ch/dataset/pd-stapo-hundebestand,Bar,"{
+  ""data"": ""https://data.stadt-zuerich.ch/dataset/pd_stapo_hundebestand/resource/9e163ae4-ca75-45ca-95f6-5a209fbd226a/download/20160307hundehalter.csv"",
+  ""filter"": ""datum.STADTKREIS == 11"",
+  ""y"": ""datum.RASSE1"",
+  ""aggregate"": ""count"",
+  ""valueTitle"": ""Dogs""
+}",,https://chart-server.now.sh/Bar?spec=%7B%0A%20%20%22data%22%3A%20%22https%3A%2F%2Fdata.stadt-zuerich.ch%2Fdataset%2Fpd_stapo_hundebestand%2Fresource%2F9e163ae4-ca75-45ca-95f6-5a209fbd226a%2Fdownload%2F20160307hundehalter.csv%22%2C%0A%20%20%22filter%22%3A%20%22datum.STADTKREIS%20%3D%3D%2011%22%2C%0A%20%20%22y%22%3A%20%22datum.RASSE1%22%2C%0A%20%20%22aggregate%22%3A%20%22count%22%2C%0A%20%20%22valueTitle%22%3A%20%22Dogs%22%0A%7D,http://localhost:3000/Bar?spec=%7B%0A%20%20%22data%22%3A%20%22https%3A%2F%2Fdata.stadt-zuerich.ch%2Fdataset%2Fpd_stapo_hundebestand%2Fresource%2F9e163ae4-ca75-45ca-95f6-5a209fbd226a%2Fdownload%2F20160307hundehalter.csv%22%2C%0A%20%20%22filter%22%3A%20%22datum.STADTKREIS%20%3D%3D%2011%22%2C%0A%20%20%22y%22%3A%20%22datum.RASSE1%22%2C%0A%20%20%22aggregate%22%3A%20%22count%22%2C%0A%20%20%22valueTitle%22%3A%20%22Dogs%22%0A%7D
+dog-2c,Dogs by Primary Breed and Owner Gender (07.03.2016),https://data.stadt-zuerich.ch/dataset/pd-stapo-hundebestand,Bar,"{
+  ""data"": ""https://data.stadt-zuerich.ch/dataset/pd_stapo_hundebestand/resource/9e163ae4-ca75-45ca-95f6-5a209fbd226a/download/20160307hundehalter.csv"",
+  ""facet"": ""datum.GESCHLECHT == 'm' ? 'M' : 'F'"",
+  ""facetTitle"": ""Gender"",
+  ""y"": ""datum.RASSE1"",
+  ""aggregate"": ""count"",
+  ""valueTitle"": ""Dogs""
+}",,https://chart-server.now.sh/Bar?spec=%7B%0A%20%20%22data%22%3A%20%22https%3A%2F%2Fdata.stadt-zuerich.ch%2Fdataset%2Fpd_stapo_hundebestand%2Fresource%2F9e163ae4-ca75-45ca-95f6-5a209fbd226a%2Fdownload%2F20160307hundehalter.csv%22%2C%0A%20%20%22facet%22%3A%20%22datum.GESCHLECHT%20%3D%3D%20'm'%20%3F%20'M'%20%3A%20'F'%22%2C%0A%20%20%22facetTitle%22%3A%20%22Gender%22%2C%0A%20%20%22y%22%3A%20%22datum.RASSE1%22%2C%0A%20%20%22aggregate%22%3A%20%22count%22%2C%0A%20%20%22valueTitle%22%3A%20%22Dogs%22%0A%7D,http://localhost:3000/Bar?spec=%7B%0A%20%20%22data%22%3A%20%22https%3A%2F%2Fdata.stadt-zuerich.ch%2Fdataset%2Fpd_stapo_hundebestand%2Fresource%2F9e163ae4-ca75-45ca-95f6-5a209fbd226a%2Fdownload%2F20160307hundehalter.csv%22%2C%0A%20%20%22facet%22%3A%20%22datum.GESCHLECHT%20%3D%3D%20'm'%20%3F%20'M'%20%3A%20'F'%22%2C%0A%20%20%22facetTitle%22%3A%20%22Gender%22%2C%0A%20%20%22y%22%3A%20%22datum.RASSE1%22%2C%0A%20%20%22aggregate%22%3A%20%22count%22%2C%0A%20%20%22valueTitle%22%3A%20%22Dogs%22%0A%7D
+dog-3,Top 10 Primary Dog Breeds (07.03.2016),https://data.stadt-zuerich.ch/dataset/pd-stapo-hundebestand,Bar,"{
+  ""data"": ""https://data.stadt-zuerich.ch/dataset/pd_stapo_hundebestand/resource/9e163ae4-ca75-45ca-95f6-5a209fbd226a/download/20160307hundehalter.csv"",
+  ""filter"": {""field"": ""RASSE1"", ""in"":[""Mischling klein"", ""Golden Retriever"", ""Französische Bulldogge"", ""Mops"", ""Malteser"", ""Yorkshire Terrier"", ""Jack Russel Terrier"", ""Labrador Retriever"", ""Chihuahua"", ""Mischling gross""]},
+  ""y"": ""datum.RASSE1"",
+  ""aggregate"": ""count"",
+  ""valueTitle"": ""Dogs""
+}",,https://chart-server.now.sh/Bar?spec=%7B%0A%20%20%22data%22%3A%20%22https%3A%2F%2Fdata.stadt-zuerich.ch%2Fdataset%2Fpd_stapo_hundebestand%2Fresource%2F9e163ae4-ca75-45ca-95f6-5a209fbd226a%2Fdownload%2F20160307hundehalter.csv%22%2C%0A%20%20%22filter%22%3A%20%7B%22field%22%3A%20%22RASSE1%22%2C%20%22in%22%3A%5B%22Mischling%20klein%22%2C%20%22Golden%20Retriever%22%2C%20%22Franz%C3%B6sische%20Bulldogge%22%2C%20%22Mops%22%2C%20%22Malteser%22%2C%20%22Yorkshire%20Terrier%22%2C%20%22Jack%20Russel%20Terrier%22%2C%20%22Labrador%20Retriever%22%2C%20%22Chihuahua%22%2C%20%22Mischling%20gross%22%5D%7D%2C%0A%20%20%22y%22%3A%20%22datum.RASSE1%22%2C%0A%20%20%22aggregate%22%3A%20%22count%22%2C%0A%20%20%22valueTitle%22%3A%20%22Dogs%22%0A%7D,http://localhost:3000/Bar?spec=%7B%0A%20%20%22data%22%3A%20%22https%3A%2F%2Fdata.stadt-zuerich.ch%2Fdataset%2Fpd_stapo_hundebestand%2Fresource%2F9e163ae4-ca75-45ca-95f6-5a209fbd226a%2Fdownload%2F20160307hundehalter.csv%22%2C%0A%20%20%22filter%22%3A%20%7B%22field%22%3A%20%22RASSE1%22%2C%20%22in%22%3A%5B%22Mischling%20klein%22%2C%20%22Golden%20Retriever%22%2C%20%22Franz%C3%B6sische%20Bulldogge%22%2C%20%22Mops%22%2C%20%22Malteser%22%2C%20%22Yorkshire%20Terrier%22%2C%20%22Jack%20Russel%20Terrier%22%2C%20%22Labrador%20Retriever%22%2C%20%22Chihuahua%22%2C%20%22Mischling%20gross%22%5D%7D%2C%0A%20%20%22y%22%3A%20%22datum.RASSE1%22%2C%0A%20%20%22aggregate%22%3A%20%22count%22%2C%0A%20%20%22valueTitle%22%3A%20%22Dogs%22%0A%7D
+dog-4,Top 10 Primary Dog Breeds by District (07.03.2016),https://data.stadt-zuerich.ch/dataset/pd-stapo-hundebestand,DistrictBar,"{
+  ""data"": ""https://data.stadt-zuerich.ch/dataset/pd_stapo_hundebestand/resource/9e163ae4-ca75-45ca-95f6-5a209fbd226a/download/20160307hundehalter.csv"",
+  ""filter"": [
+    ""datum.STADTKREIS"",
+    {""field"": ""RASSE1"", ""in"": [""Mischling klein"", ""Golden Retriever"", ""Französische Bulldogge"", ""Mops"", ""Malteser"", ""Yorkshire Terrier"", ""Jack Russel Terrier"", ""Labrador Retriever"", ""Chihuahua"", ""Mischling gross""]}
+  ],
+  ""district"": ""+datum.STADTKREIS"",
+  ""aggregate"": ""count"",
+  ""valueTitle"": ""Dogs"",
+  ""facet"": ""datum.RASSE1"",
+  ""facetTitle"": ""Primary Breed""
+} ",,https://chart-server.now.sh/DistrictBar?spec=%7B%0A%20%20%22data%22%3A%20%22https%3A%2F%2Fdata.stadt-zuerich.ch%2Fdataset%2Fpd_stapo_hundebestand%2Fresource%2F9e163ae4-ca75-45ca-95f6-5a209fbd226a%2Fdownload%2F20160307hundehalter.csv%22%2C%0A%20%20%22filter%22%3A%20%5B%0A%20%20%20%20%22datum.STADTKREIS%22%2C%0A%20%20%20%20%7B%22field%22%3A%20%22RASSE1%22%2C%20%22in%22%3A%20%5B%22Mischling%20klein%22%2C%20%22Golden%20Retriever%22%2C%20%22Franz%C3%B6sische%20Bulldogge%22%2C%20%22Mops%22%2C%20%22Malteser%22%2C%20%22Yorkshire%20Terrier%22%2C%20%22Jack%20Russel%20Terrier%22%2C%20%22Labrador%20Retriever%22%2C%20%22Chihuahua%22%2C%20%22Mischling%20gross%22%5D%7D%0A%20%20%5D%2C%0A%20%20%22district%22%3A%20%22%2Bdatum.STADTKREIS%22%2C%0A%20%20%22aggregate%22%3A%20%22count%22%2C%0A%20%20%22valueTitle%22%3A%20%22Dogs%22%2C%0A%20%20%22facet%22%3A%20%22datum.RASSE1%22%2C%0A%20%20%22facetTitle%22%3A%20%22Primary%20Breed%22%0A%7D%20,http://localhost:3000/DistrictBar?spec=%7B%0A%20%20%22data%22%3A%20%22https%3A%2F%2Fdata.stadt-zuerich.ch%2Fdataset%2Fpd_stapo_hundebestand%2Fresource%2F9e163ae4-ca75-45ca-95f6-5a209fbd226a%2Fdownload%2F20160307hundehalter.csv%22%2C%0A%20%20%22filter%22%3A%20%5B%0A%20%20%20%20%22datum.STADTKREIS%22%2C%0A%20%20%20%20%7B%22field%22%3A%20%22RASSE1%22%2C%20%22in%22%3A%20%5B%22Mischling%20klein%22%2C%20%22Golden%20Retriever%22%2C%20%22Franz%C3%B6sische%20Bulldogge%22%2C%20%22Mops%22%2C%20%22Malteser%22%2C%20%22Yorkshire%20Terrier%22%2C%20%22Jack%20Russel%20Terrier%22%2C%20%22Labrador%20Retriever%22%2C%20%22Chihuahua%22%2C%20%22Mischling%20gross%22%5D%7D%0A%20%20%5D%2C%0A%20%20%22district%22%3A%20%22%2Bdatum.STADTKREIS%22%2C%0A%20%20%22aggregate%22%3A%20%22count%22%2C%0A%20%20%22valueTitle%22%3A%20%22Dogs%22%2C%0A%20%20%22facet%22%3A%20%22datum.RASSE1%22%2C%0A%20%20%22facetTitle%22%3A%20%22Primary%20Breed%22%0A%7D%20
+dog-5,"Chihuahuas by District (Primary Breed, 07.03.2016)",https://data.stadt-zuerich.ch/dataset/pd-stapo-hundebestand,DistrictBar,"{
+  ""data"": ""https://data.stadt-zuerich.ch/dataset/pd_stapo_hundebestand/resource/9e163ae4-ca75-45ca-95f6-5a209fbd226a/download/20160307hundehalter.csv"",
+  ""filter"": ""datum.STADTKREIS && datum.RASSE1 == 'Chihuahua'"",
+  ""district"": ""+datum.STADTKREIS"",
+  ""aggregate"": ""count"",
+  ""valueTitle"": ""Dogs""
+} ",,https://chart-server.now.sh/DistrictBar?spec=%7B%0A%20%20%22data%22%3A%20%22https%3A%2F%2Fdata.stadt-zuerich.ch%2Fdataset%2Fpd_stapo_hundebestand%2Fresource%2F9e163ae4-ca75-45ca-95f6-5a209fbd226a%2Fdownload%2F20160307hundehalter.csv%22%2C%0A%20%20%22filter%22%3A%20%22datum.STADTKREIS%20%26%26%20datum.RASSE1%20%3D%3D%20'Chihuahua'%22%2C%0A%20%20%22district%22%3A%20%22%2Bdatum.STADTKREIS%22%2C%0A%20%20%22aggregate%22%3A%20%22count%22%2C%0A%20%20%22valueTitle%22%3A%20%22Dogs%22%0A%7D%20,http://localhost:3000/DistrictBar?spec=%7B%0A%20%20%22data%22%3A%20%22https%3A%2F%2Fdata.stadt-zuerich.ch%2Fdataset%2Fpd_stapo_hundebestand%2Fresource%2F9e163ae4-ca75-45ca-95f6-5a209fbd226a%2Fdownload%2F20160307hundehalter.csv%22%2C%0A%20%20%22filter%22%3A%20%22datum.STADTKREIS%20%26%26%20datum.RASSE1%20%3D%3D%20'Chihuahua'%22%2C%0A%20%20%22district%22%3A%20%22%2Bdatum.STADTKREIS%22%2C%0A%20%20%22aggregate%22%3A%20%22count%22%2C%0A%20%20%22valueTitle%22%3A%20%22Dogs%22%0A%7D%20
+dog-6,"Labrador Retrievers by District (Primary Breed, 07.03.2016)",https://data.stadt-zuerich.ch/dataset/pd-stapo-hundebestand,DistrictBar,"{
+  ""data"": ""https://data.stadt-zuerich.ch/dataset/pd_stapo_hundebestand/resource/9e163ae4-ca75-45ca-95f6-5a209fbd226a/download/20160307hundehalter.csv"",
+  ""filter"": ""datum.STADTKREIS && datum.RASSE1 == 'Labrador Retriever'"",
+  ""district"": ""+datum.STADTKREIS"",
+  ""aggregate"": ""count"",
+  ""valueTitle"": ""Dogs""
+} ",,https://chart-server.now.sh/DistrictBar?spec=%7B%0A%20%20%22data%22%3A%20%22https%3A%2F%2Fdata.stadt-zuerich.ch%2Fdataset%2Fpd_stapo_hundebestand%2Fresource%2F9e163ae4-ca75-45ca-95f6-5a209fbd226a%2Fdownload%2F20160307hundehalter.csv%22%2C%0A%20%20%22filter%22%3A%20%22datum.STADTKREIS%20%26%26%20datum.RASSE1%20%3D%3D%20'Labrador%20Retriever'%22%2C%0A%20%20%22district%22%3A%20%22%2Bdatum.STADTKREIS%22%2C%0A%20%20%22aggregate%22%3A%20%22count%22%2C%0A%20%20%22valueTitle%22%3A%20%22Dogs%22%0A%7D%20,http://localhost:3000/DistrictBar?spec=%7B%0A%20%20%22data%22%3A%20%22https%3A%2F%2Fdata.stadt-zuerich.ch%2Fdataset%2Fpd_stapo_hundebestand%2Fresource%2F9e163ae4-ca75-45ca-95f6-5a209fbd226a%2Fdownload%2F20160307hundehalter.csv%22%2C%0A%20%20%22filter%22%3A%20%22datum.STADTKREIS%20%26%26%20datum.RASSE1%20%3D%3D%20'Labrador%20Retriever'%22%2C%0A%20%20%22district%22%3A%20%22%2Bdatum.STADTKREIS%22%2C%0A%20%20%22aggregate%22%3A%20%22count%22%2C%0A%20%20%22valueTitle%22%3A%20%22Dogs%22%0A%7D%20
+dog-7,Dogs by Owner Gender and Age Group (07.03.2016),https://data.stadt-zuerich.ch/dataset/pd-stapo-hundebestand,DemographicBar,"{
+  ""data"": ""https://data.stadt-zuerich.ch/dataset/pd_stapo_hundebestand/resource/9e163ae4-ca75-45ca-95f6-5a209fbd226a/download/20160307hundehalter.csv"",
+  ""filter"": ""datum.ALTER && datum.GESCHLECHT"",
+  ""age"": ""datum.ALTER"",
+  ""sex"": ""datum.GESCHLECHT == 'm' ? 'M' : 'F'"",
+  ""aggregate"": ""count"",
+  ""orient"": ""horizontal""
+}",,https://chart-server.now.sh/DemographicBar?spec=%7B%0A%20%20%22data%22%3A%20%22https%3A%2F%2Fdata.stadt-zuerich.ch%2Fdataset%2Fpd_stapo_hundebestand%2Fresource%2F9e163ae4-ca75-45ca-95f6-5a209fbd226a%2Fdownload%2F20160307hundehalter.csv%22%2C%0A%20%20%22filter%22%3A%20%22datum.ALTER%20%26%26%20datum.GESCHLECHT%22%2C%0A%20%20%22age%22%3A%20%22datum.ALTER%22%2C%0A%20%20%22sex%22%3A%20%22datum.GESCHLECHT%20%3D%3D%20'm'%20%3F%20'M'%20%3A%20'F'%22%2C%0A%20%20%22aggregate%22%3A%20%22count%22%2C%0A%20%20%22orient%22%3A%20%22horizontal%22%0A%7D,http://localhost:3000/DemographicBar?spec=%7B%0A%20%20%22data%22%3A%20%22https%3A%2F%2Fdata.stadt-zuerich.ch%2Fdataset%2Fpd_stapo_hundebestand%2Fresource%2F9e163ae4-ca75-45ca-95f6-5a209fbd226a%2Fdownload%2F20160307hundehalter.csv%22%2C%0A%20%20%22filter%22%3A%20%22datum.ALTER%20%26%26%20datum.GESCHLECHT%22%2C%0A%20%20%22age%22%3A%20%22datum.ALTER%22%2C%0A%20%20%22sex%22%3A%20%22datum.GESCHLECHT%20%3D%3D%20'm'%20%3F%20'M'%20%3A%20'F'%22%2C%0A%20%20%22aggregate%22%3A%20%22count%22%2C%0A%20%20%22orient%22%3A%20%22horizontal%22%0A%7D
+dog-7b,Dog Count by Owner Gender (07.03.2016),https://data.stadt-zuerich.ch/dataset/pd-stapo-hundebestand,VegaLite,"{
+  ""data"": {
+    ""url"": ""https://data.stadt-zuerich.ch/dataset/pd_stapo_hundebestand/resource/9e163ae4-ca75-45ca-95f6-5a209fbd226a/download/20160307hundehalter.csv""
+  },
+  ""transform"": {
+    ""filter"": ""datum.GESCHLECHT""
+  },
+  ""mark"": ""text"",
+  ""encoding"": {
+    ""column"": {""title"": ""Gender"", ""field"": ""GESCHLECHT"", ""type"": ""nominal"", ""sort"": ""descending""},
+    ""color"": {""field"": ""GESCHLECHT"", ""type"": ""nominal"",""scale"": {""range"": [""#659CCA"",""#EA98D2""]}},
+    ""text"": {""aggregate"": ""count"", ""field"": ""*"", ""type"": ""quantitative""}
+  }
+}",,https://chart-server.now.sh/VegaLite?spec=%7B%0A%20%20%22data%22%3A%20%7B%0A%20%20%20%20%22url%22%3A%20%22https%3A%2F%2Fdata.stadt-zuerich.ch%2Fdataset%2Fpd_stapo_hundebestand%2Fresource%2F9e163ae4-ca75-45ca-95f6-5a209fbd226a%2Fdownload%2F20160307hundehalter.csv%22%0A%20%20%7D%2C%0A%20%20%22transform%22%3A%20%7B%0A%20%20%20%20%22filter%22%3A%20%22datum.GESCHLECHT%22%0A%20%20%7D%2C%0A%20%20%22mark%22%3A%20%22text%22%2C%0A%20%20%22encoding%22%3A%20%7B%0A%20%20%20%20%22column%22%3A%20%7B%22title%22%3A%20%22Gender%22%2C%20%22field%22%3A%20%22GESCHLECHT%22%2C%20%22type%22%3A%20%22nominal%22%2C%20%22sort%22%3A%20%22descending%22%7D%2C%0A%20%20%20%20%22color%22%3A%20%7B%22field%22%3A%20%22GESCHLECHT%22%2C%20%22type%22%3A%20%22nominal%22%2C%22scale%22%3A%20%7B%22range%22%3A%20%5B%22%23659CCA%22%2C%22%23EA98D2%22%5D%7D%7D%2C%0A%20%20%20%20%22text%22%3A%20%7B%22aggregate%22%3A%20%22count%22%2C%20%22field%22%3A%20%22*%22%2C%20%22type%22%3A%20%22quantitative%22%7D%0A%20%20%7D%0A%7D,http://localhost:3000/VegaLite?spec=%7B%0A%20%20%22data%22%3A%20%7B%0A%20%20%20%20%22url%22%3A%20%22https%3A%2F%2Fdata.stadt-zuerich.ch%2Fdataset%2Fpd_stapo_hundebestand%2Fresource%2F9e163ae4-ca75-45ca-95f6-5a209fbd226a%2Fdownload%2F20160307hundehalter.csv%22%0A%20%20%7D%2C%0A%20%20%22transform%22%3A%20%7B%0A%20%20%20%20%22filter%22%3A%20%22datum.GESCHLECHT%22%0A%20%20%7D%2C%0A%20%20%22mark%22%3A%20%22text%22%2C%0A%20%20%22encoding%22%3A%20%7B%0A%20%20%20%20%22column%22%3A%20%7B%22title%22%3A%20%22Gender%22%2C%20%22field%22%3A%20%22GESCHLECHT%22%2C%20%22type%22%3A%20%22nominal%22%2C%20%22sort%22%3A%20%22descending%22%7D%2C%0A%20%20%20%20%22color%22%3A%20%7B%22field%22%3A%20%22GESCHLECHT%22%2C%20%22type%22%3A%20%22nominal%22%2C%22scale%22%3A%20%7B%22range%22%3A%20%5B%22%23659CCA%22%2C%22%23EA98D2%22%5D%7D%7D%2C%0A%20%20%20%20%22text%22%3A%20%7B%22aggregate%22%3A%20%22count%22%2C%20%22field%22%3A%20%22*%22%2C%20%22type%22%3A%20%22quantitative%22%7D%0A%20%20%7D%0A%7D
+dog-7c,"Dogs by Top 10 Breeds, Owner Gender and Age Group (07.03.2016)",https://data.stadt-zuerich.ch/dataset/pd-stapo-hundebestand,DemographicBar,"{
+  ""data"": ""https://data.stadt-zuerich.ch/dataset/pd_stapo_hundebestand/resource/9e163ae4-ca75-45ca-95f6-5a209fbd226a/download/20160307hundehalter.csv"",
+  ""filter"": [""datum.ALTER && datum.GESCHLECHT"", {""field"": ""RASSE1"", ""in"":[""Mischling klein"", ""Golden Retriever"", ""Französische Bulldogge"", ""Mops"", ""Malteser"", ""Yorkshire Terrier"", ""Jack Russel Terrier"", ""Labrador Retriever"", ""Chihuahua"", ""Mischling gross""]}],
+  ""age"": ""datum.ALTER"",
+  ""sex"": ""datum.GESCHLECHT == 'm' ? 'M' : 'F'"",
+  ""aggregate"": ""count"",
+  ""facet"": ""datum.RASSE1"",
+  ""facetTitle"": ""Primary Breed""
+} ",,https://chart-server.now.sh/DemographicBar?spec=%7B%0A%20%20%22data%22%3A%20%22https%3A%2F%2Fdata.stadt-zuerich.ch%2Fdataset%2Fpd_stapo_hundebestand%2Fresource%2F9e163ae4-ca75-45ca-95f6-5a209fbd226a%2Fdownload%2F20160307hundehalter.csv%22%2C%0A%20%20%22filter%22%3A%20%5B%22datum.ALTER%20%26%26%20datum.GESCHLECHT%22%2C%20%7B%22field%22%3A%20%22RASSE1%22%2C%20%22in%22%3A%5B%22Mischling%20klein%22%2C%20%22Golden%20Retriever%22%2C%20%22Franz%C3%B6sische%20Bulldogge%22%2C%20%22Mops%22%2C%20%22Malteser%22%2C%20%22Yorkshire%20Terrier%22%2C%20%22Jack%20Russel%20Terrier%22%2C%20%22Labrador%20Retriever%22%2C%20%22Chihuahua%22%2C%20%22Mischling%20gross%22%5D%7D%5D%2C%0A%20%20%22age%22%3A%20%22datum.ALTER%22%2C%0A%20%20%22sex%22%3A%20%22datum.GESCHLECHT%20%3D%3D%20'm'%20%3F%20'M'%20%3A%20'F'%22%2C%0A%20%20%22aggregate%22%3A%20%22count%22%2C%0A%20%20%22facet%22%3A%20%22datum.RASSE1%22%2C%0A%20%20%22facetTitle%22%3A%20%22Primary%20Breed%22%0A%7D%20,http://localhost:3000/DemographicBar?spec=%7B%0A%20%20%22data%22%3A%20%22https%3A%2F%2Fdata.stadt-zuerich.ch%2Fdataset%2Fpd_stapo_hundebestand%2Fresource%2F9e163ae4-ca75-45ca-95f6-5a209fbd226a%2Fdownload%2F20160307hundehalter.csv%22%2C%0A%20%20%22filter%22%3A%20%5B%22datum.ALTER%20%26%26%20datum.GESCHLECHT%22%2C%20%7B%22field%22%3A%20%22RASSE1%22%2C%20%22in%22%3A%5B%22Mischling%20klein%22%2C%20%22Golden%20Retriever%22%2C%20%22Franz%C3%B6sische%20Bulldogge%22%2C%20%22Mops%22%2C%20%22Malteser%22%2C%20%22Yorkshire%20Terrier%22%2C%20%22Jack%20Russel%20Terrier%22%2C%20%22Labrador%20Retriever%22%2C%20%22Chihuahua%22%2C%20%22Mischling%20gross%22%5D%7D%5D%2C%0A%20%20%22age%22%3A%20%22datum.ALTER%22%2C%0A%20%20%22sex%22%3A%20%22datum.GESCHLECHT%20%3D%3D%20'm'%20%3F%20'M'%20%3A%20'F'%22%2C%0A%20%20%22aggregate%22%3A%20%22count%22%2C%0A%20%20%22facet%22%3A%20%22datum.RASSE1%22%2C%0A%20%20%22facetTitle%22%3A%20%22Primary%20Breed%22%0A%7D%20
+dog-8,"Labrador Retrievers by Owner Gender and Age Group (Primary Breed, 07.03.2016)",https://data.stadt-zuerich.ch/dataset/pd-stapo-hundebestand,DemographicBar,"{
+  ""data"": ""https://data.stadt-zuerich.ch/dataset/pd_stapo_hundebestand/resource/9e163ae4-ca75-45ca-95f6-5a209fbd226a/download/20160307hundehalter.csv"",
+  ""filter"": ""datum.ALTER && datum.GESCHLECHT && datum.RASSE1 == 'Labrador Retriever'"",
+  ""age"": ""datum.ALTER"",
+  ""sex"": ""datum.GESCHLECHT == 'm' ? 'M' : 'F'"",
+  ""aggregate"": ""count""
+}",,https://chart-server.now.sh/DemographicBar?spec=%7B%0A%20%20%22data%22%3A%20%22https%3A%2F%2Fdata.stadt-zuerich.ch%2Fdataset%2Fpd_stapo_hundebestand%2Fresource%2F9e163ae4-ca75-45ca-95f6-5a209fbd226a%2Fdownload%2F20160307hundehalter.csv%22%2C%0A%20%20%22filter%22%3A%20%22datum.ALTER%20%26%26%20datum.GESCHLECHT%20%26%26%20datum.RASSE1%20%3D%3D%20'Labrador%20Retriever'%22%2C%0A%20%20%22age%22%3A%20%22datum.ALTER%22%2C%0A%20%20%22sex%22%3A%20%22datum.GESCHLECHT%20%3D%3D%20'm'%20%3F%20'M'%20%3A%20'F'%22%2C%0A%20%20%22aggregate%22%3A%20%22count%22%0A%7D,http://localhost:3000/DemographicBar?spec=%7B%0A%20%20%22data%22%3A%20%22https%3A%2F%2Fdata.stadt-zuerich.ch%2Fdataset%2Fpd_stapo_hundebestand%2Fresource%2F9e163ae4-ca75-45ca-95f6-5a209fbd226a%2Fdownload%2F20160307hundehalter.csv%22%2C%0A%20%20%22filter%22%3A%20%22datum.ALTER%20%26%26%20datum.GESCHLECHT%20%26%26%20datum.RASSE1%20%3D%3D%20'Labrador%20Retriever'%22%2C%0A%20%20%22age%22%3A%20%22datum.ALTER%22%2C%0A%20%20%22sex%22%3A%20%22datum.GESCHLECHT%20%3D%3D%20'm'%20%3F%20'M'%20%3A%20'F'%22%2C%0A%20%20%22aggregate%22%3A%20%22count%22%0A%7D
+dog-9,"Chihuahuas by Owner Gender and Age Group (Primary Breed, 07.03.2016)",https://data.stadt-zuerich.ch/dataset/pd-stapo-hundebestand,DemographicBar,"{
+  ""data"": ""https://data.stadt-zuerich.ch/dataset/pd_stapo_hundebestand/resource/9e163ae4-ca75-45ca-95f6-5a209fbd226a/download/20160307hundehalter.csv"",
+  ""filter"": ""datum.ALTER && datum.GESCHLECHT && datum.RASSE1 == 'Chihuahua'"",
+  ""age"": ""datum.ALTER"",
+  ""sex"": ""datum.GESCHLECHT == 'm' ? 'M' : 'F'"",
+  ""aggregate"": ""count""
+}",,https://chart-server.now.sh/DemographicBar?spec=%7B%0A%20%20%22data%22%3A%20%22https%3A%2F%2Fdata.stadt-zuerich.ch%2Fdataset%2Fpd_stapo_hundebestand%2Fresource%2F9e163ae4-ca75-45ca-95f6-5a209fbd226a%2Fdownload%2F20160307hundehalter.csv%22%2C%0A%20%20%22filter%22%3A%20%22datum.ALTER%20%26%26%20datum.GESCHLECHT%20%26%26%20datum.RASSE1%20%3D%3D%20'Chihuahua'%22%2C%0A%20%20%22age%22%3A%20%22datum.ALTER%22%2C%0A%20%20%22sex%22%3A%20%22datum.GESCHLECHT%20%3D%3D%20'm'%20%3F%20'M'%20%3A%20'F'%22%2C%0A%20%20%22aggregate%22%3A%20%22count%22%0A%7D,http://localhost:3000/DemographicBar?spec=%7B%0A%20%20%22data%22%3A%20%22https%3A%2F%2Fdata.stadt-zuerich.ch%2Fdataset%2Fpd_stapo_hundebestand%2Fresource%2F9e163ae4-ca75-45ca-95f6-5a209fbd226a%2Fdownload%2F20160307hundehalter.csv%22%2C%0A%20%20%22filter%22%3A%20%22datum.ALTER%20%26%26%20datum.GESCHLECHT%20%26%26%20datum.RASSE1%20%3D%3D%20'Chihuahua'%22%2C%0A%20%20%22age%22%3A%20%22datum.ALTER%22%2C%0A%20%20%22sex%22%3A%20%22datum.GESCHLECHT%20%3D%3D%20'm'%20%3F%20'M'%20%3A%20'F'%22%2C%0A%20%20%22aggregate%22%3A%20%22count%22%0A%7D
+baths-1,Bathing Spots,https://gist.github.com/tpreusse/e4c166de85211a2a9294207acd23210c,ZurichMap,"{
+  ""data"": ""https://gist.githubusercontent.com/tpreusse/e4c166de85211a2a9294207acd23210c/raw/4abb0a423bd3bf46801eb5431e0480a7f387527e/baths.csv"",
+  ""category"": ""Type""
+}",,https://chart-server.now.sh/ZurichMap?spec=%7B%0A%20%20%22data%22%3A%20%22https%3A%2F%2Fgist.githubusercontent.com%2Ftpreusse%2Fe4c166de85211a2a9294207acd23210c%2Fraw%2F4abb0a423bd3bf46801eb5431e0480a7f387527e%2Fbaths.csv%22%2C%0A%20%20%22category%22%3A%20%22Type%22%0A%7D,http://localhost:3000/ZurichMap?spec=%7B%0A%20%20%22data%22%3A%20%22https%3A%2F%2Fgist.githubusercontent.com%2Ftpreusse%2Fe4c166de85211a2a9294207acd23210c%2Fraw%2F4abb0a423bd3bf46801eb5431e0480a7f387527e%2Fbaths.csv%22%2C%0A%20%20%22category%22%3A%20%22Type%22%0A%7D
