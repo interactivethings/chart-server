@@ -135,7 +135,7 @@ d3.csv('example.csv', function(error, data) {
     .datum(function() { return this.dataset; })
     .each(function(d, i) {
       var figure = d3.select(this);
-      var chart = data.find(function(chart) { return chart.id === d.chart; });
+      var chart = data.filter(function(chart) { return chart.id === d.chart; })[0];
       if (!chart) {
         var error = 'Unkown chart ' + d.chart;
         figure.append('figcaption').text(error);
