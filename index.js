@@ -1,7 +1,7 @@
 const express = require('express');
 const vg = require('vega');
 
-const app = express();
+vg.config.load.baseURL = 'https://vega.github.io/vega-editor/app/';
 
 const TYPES = {
   VegaLite: require('./charts/VegaLite'),
@@ -11,6 +11,7 @@ const TYPES = {
   ZurichMap: require('./charts/ZurichMap')
 };
 
+const app = express();
 app.get('/:type', (request, response) => {
   if (!TYPES[request.params.type]) {
     return response.status(404).send('Not Found');
