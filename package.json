@@ -9,8 +9,7 @@
   "scripts": {
     "start": "node index.js"
   },
-  "author": "",
-  "license": "MIT",
+  "license": "BSD-3-Clause",
   "dependencies": {
     "express": "^4.14.0",
     "vega": "^2.6.0",
